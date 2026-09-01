@@ -10,15 +10,17 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "label", "category", "ptm_category", "patterns"],
+        "required": ["id", "label", "category", "privacy_kind", "ptm_category", "patterns"],
         "properties": {
           "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
           "label": {"type": "string", "minLength": 1},
           "category": {"type": "string", "minLength": 1},
+          "privacy_kind": {"type": "string", "minLength": 1},
           "ptm_category": {"enum": ["statistics", "marketing", "external", "review", "functional"]},
           "wp_consent_category": {"type": ["string", "null"], "enum": ["functional", "preferences", "statistics-anonymous", "statistics", "marketing", null]},
           "patterns": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
           "wordpress_plugin_slugs": {"type": "array", "items": {"type": "string"}},
+          "spip_plugin_prefixes": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"}},
           "note": {"type": "string"}
         },
         "additionalProperties": true
