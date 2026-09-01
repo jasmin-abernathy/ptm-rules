@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PTM Rules SPIP plugin profiles",
+  "type": "object",
+  "required": ["schema_version", "catalog_version", "plugins"],
+  "properties": {
+    "schema_version": {"type": "integer", "minimum": 1},
+    "catalog_version": {"type": "string", "minLength": 1},
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["prefix", "label", "role", "privacy_kind", "severity", "services", "note"],
+        "properties": {
+          "prefix": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+          "label": {"type": "string", "minLength": 1},
+          "role": {"type": "string", "minLength": 1},
+          "privacy_kind": {"type": "string", "minLength": 1},
+          "severity": {"enum": ["info", "review", "high"]},
+          "services": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"}},
+          "note": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
