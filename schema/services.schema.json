@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PTM Rules services catalogue",
+  "type": "object",
+  "required": ["schema_version", "catalog_version", "services"],
+  "properties": {
+    "schema_version": {"type": "integer", "minimum": 1},
+    "catalog_version": {"type": "string", "minLength": 1},
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "category", "ptm_category", "patterns"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "label": {"type": "string", "minLength": 1},
+          "category": {"type": "string", "minLength": 1},
+          "ptm_category": {"enum": ["statistics", "marketing", "external", "review", "functional"]},
+          "wp_consent_category": {"type": ["string", "null"], "enum": ["functional", "preferences", "statistics-anonymous", "statistics", "marketing", null]},
+          "patterns": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "wordpress_plugin_slugs": {"type": "array", "items": {"type": "string"}},
+          "note": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
