@@ -31,7 +31,9 @@ Un **profil de plugin SPIP** représente une capacité ou un traitement potentie
 
 ## Couverture SPIP
 
-Le catalogue SPIP 0.2.0 couvre en priorité les familles pertinentes de l'écosystème SPIP 4.4 : statistiques, formulaires, newsletters/e-mail, anti-spam, médias/oEmbed, cartographie, réseaux sociaux, avatars, CMP, paiements, pages légales et import/export.
+Le catalogue SPIP 0.2.1 contient **45 profils**. Il couvre en priorité les familles pertinentes de l'écosystème SPIP 4.4 : statistiques, formulaires, newsletters/e-mail, anti-spam, médias/oEmbed, cartographie, réseaux sociaux, avatars, CMP, paiements, pages légales, import/export et plusieurs fonctionnalités locales connues afin de réduire les faux positifs.
+
+Les profils locaux `Crayons`, `Image Typo` et `Squelettes par rubrique`, ajoutés à partir d'un cas réel, sont explicitement classés comme fonctionnalités locales et non comme traceurs.
 
 PTM-SPIP doit en plus inventorier **tous** les plugins actifs. Un plugin non catalogué ne disparaît donc pas : s'il semble lié aux données, à un formulaire, au tracking ou à un service externe, il est envoyé en vérification humaine.
 
