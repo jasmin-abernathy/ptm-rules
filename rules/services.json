@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "catalog_version": "0.2.0",
+  "catalog_version": "0.2.1",
   "services": [
     {"id":"google-analytics","label":"Google Analytics","category":"analytics","privacy_kind":"tracker","ptm_category":"statistics","wp_consent_category":"statistics","patterns":["google-analytics.com","googletagmanager.com/gtag/js","gtag("],"wordpress_plugin_slugs":["google-site-kit","ga-google-analytics","monsterinsights","google-analytics-for-wordpress","woocommerce-google-analytics-integration","exactmetrics","exactmetrics-premium"],"spip_plugin_prefixes":["googleanalytics"]},
     {"id":"google-tag-manager","label":"Google Tag Manager","category":"tag_manager","privacy_kind":"tracker_container","ptm_category":"marketing","wp_consent_category":"marketing","patterns":["googletagmanager.com/gtm.js","GTM-"],"wordpress_plugin_slugs":["duracelltomi-google-tag-manager","google-tag-manager","google-site-kit"],"spip_plugin_prefixes":[]},
